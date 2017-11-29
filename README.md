@@ -2,7 +2,9 @@
 
 Bir önceki örnekte [Şehir-Plaka kodu arama projesi](https://github.com/ikivanc/TRPlateBot) ile bot framework üzerinde bir chatbot senaryosunda entegre edilmesini incelemiştik.
 
-Bu örnekte de Microsoft Cognitive Services çözümlerinden birisi olan [LUIS - (Language Understanding Intelligence Service)](https://www.luis.ai) ile Natural Language Processing - NLP (Doğal Dil Anlama) için kullanılan bir servisidir.
+Bu örnekte de Microsoft Cognitive Services çözümlerinden birisi olan [LUIS - (Language Understanding Intelligence Service)](https://www.luis.ai) ile Natural Language Processing - NLP (Doğal Dil Anlama) için kullanılan bu servisi inceleyeceğiz.
+
+Bu chatbot projesinin tamamına erişmek isterseniz [https://github.com/ikivanc/TRPlateBot-LUIS](https://github.com/ikivanc/TRPlateBot-LUIS) adresinden ulaşabilirsiniz.
 
 ![](screenshots/luis-overview-process.png)
 
@@ -28,7 +30,7 @@ LUIS içerisidne 3 temel konu karşımıza çıkmakta
 
 ``Utterance`` Kullanıcıların sisteme sorduğu sorular olarak düşünebiliriz. Bu cümlelerden hangi aksiyonun ve detayın olduğunu çıkarmaya çalışacağımız terim.
 
-``Intent`` Cümlelerden çıkarılacak anlama göre yapmak istediğiniz anlam. Bunu günlük kullanımımızda düşünecek olursa uygulamalarımız için yazdığımız method veya fonksiyonlar olarak düşünebiliriz. 
+``Intent`` Cümlelerden çıkarılacak anlama göre yapmak istediğiniz anlam. Bunu günlük kullanımımızda düşünecek olursa uygulamalarımız için yazdığımız method veya fonksiyonlar olarak düşünebiliriz.
 
 ``Entities`` Uttarance içerisinde yakalayabileceğiniz kelime veya kelime grubuna denilmektedir. Genellikle bunu cümle içerisinde yakalayabileceğiniz parametreler olarak düşünebilirsiniz. 
 
@@ -45,7 +47,7 @@ Bir örnek üzerinde inceleyecek olursak aşağıdaki örnekler buna örnek olab
 Yeni bir LUIS Projesi oluşturmayı ve adım adım eklemeyi [LUIS dökümantasyonundan](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-luis-dialogs) inceleyebilirsiniz. 
 
 Bu örnekte daha önce oluşturulmuş LUIS yapısını import ederek incelemeyi göreceğiz. Bunun için buradan Şehir-Plaka kodu konusundaki json dosyasını kaydedin. [PlateNumber.json](  
-https://github.com/ikivanc/TRPlateBot-LUIS/LUISExport/PlateNumber.json)
+https://github.com/ikivanc/TRPlateBot-LUIS/blob/master/LUISExport/PlateNumber.json)
 
 Bilgisayarınıza kaydedeceğini bu .json uzantılı dosyayı aşağıdaki gibi my apps bölümün'de Import'a basarak upload edin.
 ![](screenshots/importLUIS.png)
@@ -162,3 +164,7 @@ public class RootLuisDialog : LuisDialog<object>
 
 ## Kod'un emülatör üzerinde çalışması
 ![](screenshots/botemulatorLUIS.png)
+
+Bu örnekte de gördüğümüz gibi, komut-cevap şeklinde chatbot'ları bot framework'te geliştirebileceğimiz gibi, Bot'umuza zeki anlayan bir yapı katmak istersek LUIS Servisi bunu sağlayabilecek servislerden. LUIS alt yapısını ister chatbot, ister mobil uygulama isterseniz de masaüstü, web uygulamalarınıza entegre edebilirsiniz.
+
+iyi çalışmalar. 

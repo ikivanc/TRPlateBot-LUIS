@@ -9,7 +9,7 @@
     using Microsoft.Bot.Connector;
     using Microsoft.Bot.Builder.FormFlow;
 
-    [LuisModel("4da30a78-0cd2-4437-b65c-fb22e6829a70", "fd532771c15441d9a4639590be940c4d")]
+    [LuisModel("<YOUR_LUIS_APP_ID>", "YOUR_SUBSCRIPTION_KEY")]
     [Serializable]
     public class RootLuisDialog : LuisDialog<object>
     {
